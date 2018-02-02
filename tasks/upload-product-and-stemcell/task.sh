@@ -27,8 +27,8 @@ if [ -n "$STEMCELL_VERSION" ]; then
   diagnostic_report=$(
     om-linux \
       --target https://$OPSMAN_DOMAIN_OR_IP_ADDRESS \
-      --client-id "${OPSMAN_CLIENT_ID}" \
-      --client-secret "${OPSMAN_CLIENT_SECRET}" \
+      --client-id om-client \
+      --client-secret mypassword \
       --skip-ssl-validation \
       curl --silent --path "/api/v0/diagnostic_report"
   )
